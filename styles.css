@@ -1,0 +1,766 @@
+/* ======================================================================
+   GLOBAL RESET & BASE STYLES
+====================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-image: url("Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0093.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
+    background-blend-mode: lighten;
+}
+
+/* ======================================================================
+   SIDEBAR
+====================================================================== */
+.sidebar {
+    width: 250px;
+    background-color: #0056b3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar-logo {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* ======================================================================
+   MAIN CONTENT
+====================================================================== */
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 30px;
+}
+
+/* ======================================================================
+   HERO SECTION
+====================================================================== */
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ======================================================================
+   INFO SECTION
+====================================================================== */
+.info {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.info ul {
+    margin-left: 20px;
+    padding-left: 15px;
+}
+
+.info ul li {
+    margin-bottom: 10px;
+}
+
+/* ======================================================================
+   PRODUCT PAGE
+====================================================================== */
+.product-page {
+    max-width: 1100px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.99);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-hero {
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.product-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.ava-title {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.model-number {
+    font-weight: 600;
+    color: #aad4ff;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: cover;
+    border-top: 3px solid #004080;
+    border-bottom: 3px solid #004080;
+    margin: 0 auto;
+}
+
+.product-description {
+    padding: 40px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+.product-description p {
+    margin-bottom: 20px;
+}
+
+/* ======================================================================
+   LIGHTBOX
+====================================================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80vh;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+    transition: 0.3s;
+    z-index: 2010;
+}
+
+.prev:hover,
+.next:hover {
+    color: #aad4ff;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* ======================================================================
+   SCROLL GALLERY
+====================================================================== */
+.product-gallery-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: #004aad;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.gallery-track img {
+    height: 200px;
+    border-radius: 10px;
+    cursor: grab;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-track img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ======================================================================
+   BACK HOME BUTTON
+====================================================================== */
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1100;
+}
+
+.back-home:hover {
+    background-color: #00408f;
+    transform: translateY(-2px);
+}
+
+/* ======================================================================
+   LANGUAGE SWITCHER
+====================================================================== */
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 16px;
+    z-index: 1100;
+}
+
+.language-switcher a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.language-switcher a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================================================
+   MENU & SUBMENU (klikane)
+====================================================================== */
+.main-menu,
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu>li>a {
+    display: block;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.main-menu>li>a:hover {
+    background-color: #004080;
+}
+
+/* --- Submenu --- */
+.submenu {
+    display: none;
+    flex-direction: column;
+    position: static;
+    background-color: #004c99;
+    margin-top: 8px;
+    margin-left: 10px;
+    border-radius: 6px;
+    padding: 5px 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.submenu.open {
+    display: flex;
+}
+
+/* --- Linki w submenu --- */
+.submenu a {
+    font-weight: normal;
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.submenu a:hover {
+    background-color: #003f7f;
+}
+
+/* --- Strzałki --- */
+.submenu-toggle::after {
+    content: "▶";
+    float: right;
+    transition: transform 0.2s;
+}
+
+.submenu-toggle.active::after {
+    transform: rotate(90deg);
+}
+
+/* ======================================================================
+   RESPONSYWNOŚĆ
+====================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 28px;
+        background: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 14px;
+        z-index: 1500;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #0056b3;
+        transition: left 0.3s ease;
+        z-index: 1400;
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .gallery-track img {
+        height: 140px;
+    }
+
+    .product-page {
+        margin: 20px auto;
+        width: 95%;
+    }
+}
+
+/* ======================================================================
+   ULEPSZONY WYGLĄD MENU — estetyka i mniejsza strzałka
+====================================================================== */
+
+/* Ogólne odstępy */
+.main-menu>li {
+    margin-bottom: 10px;
+}
+
+/* Linki główne */
+.main-menu>li>a {
+    display: block;
+    padding: 14px 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.main-menu>li>a:hover {
+    background-color: #00408f;
+    transform: translateX(3px);
+}
+
+/* Submenu — tło, padding, zaokrąglenia */
+.submenu {
+    display: none;
+    flex-direction: column;
+    position: static;
+    background-color: #004c99;
+    margin-top: 8px;
+    margin-left: 14px;
+    border-radius: 10px;
+    padding: 8px 0;
+    overflow: hidden;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu.open {
+    display: flex;
+}
+
+/* Linki w submenu */
+.submenu a {
+    font-weight: 500;
+    padding: 10px 26px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.submenu a:hover {
+    background-color: #003f7f;
+    transform: translateX(4px);
+}
+
+/* Strzałka — mniejsza, płaska „v” */
+.submenu-toggle::after {
+    content: "▾";
+    /* spłaszczony „v” zamiast trójkąta */
+    float: right;
+    font-size: 0.8em;
+    margin-left: 6px;
+    transition: transform 0.25s ease;
+    opacity: 0.9;
+}
+
+.submenu-toggle.active::after {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* Większe przerwy i wcięcia wewnętrzne */
+.submenu li {
+    margin: 4px 0;
+}
+
+/* ======== ELEGANCKIE MENU ROZWIJANE – ESTETYCZNE POPRAWKI ======== */
+
+.sidebar nav ul li a {
+    font-size: 15px;
+    /* mniejszy i bardziej spójny z hierarchią */
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #00408f;
+}
+
+/* główne linki */
+.main-menu>li>a {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* Submenu – uproszczone i bardziej „czyste” */
+.submenu {
+    display: none;
+    flex-direction: column;
+    position: static;
+    background-color: rgba(0, 72, 173, 0.95);
+    margin-top: 6px;
+    margin-left: 12px;
+    border-radius: 10px;
+    padding: 6px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    /* delikatny cień */
+    transition: all 0.3s ease;
+}
+
+.submenu.open {
+    display: flex;
+}
+
+/* linki w submenu */
+.submenu a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Strzałki – bardziej eleganckie i „płaskie” */
+.submenu-toggle::after {
+    content: "▾";
+    /* spłaszczony V zamiast dużego trójkąta */
+    font-size: 10px;
+    margin-left: 6px;
+    transition: transform 0.25s ease;
+    vertical-align: middle;
+}
+
+.submenu-toggle.active::after {
+    transform: rotate(180deg);
+}
+
+/* Odstępy między grupami menu */
+.main-menu>li {
+    margin-bottom: 12px;
+}
+
+/* =============================
+   Poprawa wyglądu "nagłówków" submenu
+   ============================= */
+
+/* Główne kategorie w submenu (np. Łodzie klubowe, Łodzie olimpijskie) */
+.submenu>.has-submenu>.submenu-toggle {
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: rgba(0, 64, 143, 0.7);
+    padding: 10px 18px;
+    border-radius: 6px;
+    margin: 6px 10px;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efekt hover na tytułach sekcji */
+.submenu>.has-submenu>.submenu-toggle:hover {
+    background-color: rgba(0, 64, 143, 0.9);
+}
+
+/* Linki wewnątrz sekcji (np. AVA 4.80, AVA 5.15...) */
+.submenu .submenu a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #e8f0ff;
+    background: none;
+    margin-left: 16px;
+    border-radius: 6px;
+    padding: 7px 20px;
+}
+
+/* Hover dla linków wewnętrznych */
+.submenu .submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* Delikatne oddzielenie sekcji w submenu */
+.submenu>.has-submenu {
+    padding-top: 6px;
+    margin-top: 6px;
+}
+
+/* ====================================================================== STOPKA PRODUKTU ====================================================================== */
+.product-footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+.footer-info {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-info a {
+    color: #aad4ff;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* ====================================================================== STOPKA NA BIAŁYM TLE ====================================================================== */
+.product-footer.light {
+    background-color: #ffffff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 420px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-logo-light {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-info-light {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222;
+}
+
+.footer-info-light a {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-info-light a:hover {
+    text-decoration: underline;
+}
+
+/* 🌐 Przełącznik języka – elegancki styl */
+.language-switcher {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 6px 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #003366;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 4px;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.language-switcher button:hover {
+    background-color: rgba(0, 51, 102, 0.1);
+}
+
+.language-switcher button.active {
+    background-color: #003366;
+    color: white;
+}

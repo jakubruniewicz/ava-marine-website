@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AVA 5.4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../lang.js"></script>
+</head>
+
+<script>
+    const images = [
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0031.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0032.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0033.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0034.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0035.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0036.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0037.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0040.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0041.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0042.jpg",
+        "../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0043.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex >= images.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+</script>
+
+<body>
+    <div class="language-switcher">
+        <button onclick="setLanguage('pl')">PL</button> |
+        <button onclick="setLanguage('en')">EN</button>
+    </div>
+
+    <a href="../index.html" class="back-home" data-key="back_home">← Strona główna</a>
+
+    <div class="product-page">
+        <div class="product-gallery-scroll">
+            <div class="gallery-track">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0031.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(0)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0032.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(1)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0033.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(2)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0034.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(3)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0035.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(4)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0036.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(5)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0037.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(6)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0040.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(7)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0041.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(8)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0042.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(9)">
+                <img src="../AVA5.4/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0043.jpg" alt="AVA 5.4"
+                    onclick="openLightbox(10)">
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close" onclick="closeLightbox(); event.stopPropagation();">&times;</span>
+            <img class="lightbox-img" id="lightbox-img">
+            <a class="prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</a>
+            <a class="next" onclick="changeImage(1); event.stopPropagation();">&#10095;</a>
+        </div>
+
+        <div class="product-description">
+            <h1 class="model-header" data-key="product_540_title">AVA 5.40</h1>
+            <p data-key="product_540_p1">
+                Łódź pneumatyczna RIB AVA 5.40 (540 cm) to wyjątkowo wszechstronny i niezawodny ponton,
+                idealny jako łódź trenerska dla klas przygotowawczych do olimpijskich, takich jak 29er, 420 czy ILCA.
+            </p>
+
+            <p data-key="product_540_p2">
+                Dzięki solidnej konstrukcji, sztywnej skorupie i dużej manewrowości,
+                zapewnia bezpieczeństwo i pełną kontrolę nawet w wymagających warunkach.
+            </p>
+
+            <p data-key="product_540_p3">
+                Długość 5,4 m gwarantuje odpowiednią stabilność i przestrzeń roboczą, a mocny silnik (sugerowane 50KM)
+                pozwala na szybkie reagowanie podczas treningów.
+            </p>
+
+            <p data-key="product_540_p4">
+                To sprawdzony wybór dla klubów i trenerów stawiających na efektywną pracę
+                z młodzieżą na najwyższym poziomie.
+            </p>
+        </div>
+
+        <footer class="product-footer light">
+            <div class="footer-card">
+                <img src="../titleImages/logo_clean.png" alt="AVA Marine Logo" class="footer-logo-light">
+                <div class="footer-info-light">
+                    <p><strong data-key="footer_email">Email:</strong> <a
+                            href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a></p>
+                    <p><strong data-key="footer_phone">Telefon:</strong> +48 535 610 007, +48 501 399 200</p>
+                    <p><strong data-key="footer_company">AVAMARINE Sp. z o.o.</strong><br>
+                        <span data-key="footer_address">Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
