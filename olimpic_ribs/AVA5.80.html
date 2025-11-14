@@ -5,45 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVA 5.80 Olympic</title>
+
+    <!-- 🔥 Klucz tytułu strony (dla tłumaczeń) -->
+    <script>
+        window.pageTitleKey = "page_title_580";
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-    <script defer src="../lang.js"></script>
-    <link rel="icon" type="image/png" href="../favicon.png">
 
+    <!-- musi być po pageTitleKey -->
+    <script defer src="../lang.js"></script>
+
+    <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 
-<script>
-    const images = [
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0080.jpg",
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0076.jpg",
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0078.jpg",
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0079.jpg",
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0075.jpg",
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0072.jpg",
-        "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0083.jpg"
-    ];
-
-    let currentIndex = 0;
-
-    function openLightbox(index) {
-        currentIndex = index;
-        document.getElementById("lightbox").style.display = "block";
-        document.getElementById("lightbox-img").src = images[currentIndex];
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-
-    function changeImage(n) {
-        currentIndex += n;
-        if (currentIndex >= images.length) currentIndex = 0;
-        if (currentIndex < 0) currentIndex = images.length - 1;
-        document.getElementById("lightbox-img").src = images[currentIndex];
-    }
-</script>
-
 <body>
+
+    <script>
+        const images = [
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0080.jpg",
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0076.jpg",
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0078.jpg",
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0079.jpg",
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0075.jpg",
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0072.jpg",
+            "../AVA5.80/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0083.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById("lightbox").style.display = "block";
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function changeImage(n) {
+            currentIndex += n;
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
+    </script>
+
     <div class="language-switcher">
         <button onclick="setLanguage('pl')">PL</button> |
         <button onclick="setLanguage('en')">EN</button>
@@ -80,26 +89,20 @@
 
         <div class="product-description">
             <h1 class="model-header" data-key="product_580_title">AVA 5.80 Olympic</h1>
+
             <p data-key="product_580_p1">
                 Łódź pneumatyczna RIB <span class="bold">Olimpic AVA 5.80 (580 cm)</span> to nowoczesna, dopracowana
                 konstrukcja stworzona z myślą o intensywnych kampaniach olimpijskich.
             </p>
-            <p data-key="product_580_p2">
-                Wydłużony, przestronny kokpit zapewnia trenerowi komfort pracy oraz miejsce na niezbędny sprzęt i zapasy
-                podczas długich dni treningowych.
-            </p>
-            <p data-key="product_580_p3">
-                Solidny kadłub o długości 5,8 m doskonale sprawdza się w wymagających warunkach typowych dla
-                olimpijskich akwenów regatowych.
-            </p>
-            <p data-key="product_580_p4">
-                Rekomendowana moc silnika <span class="bold">70 KM</span> umożliwia dynamiczne poruszanie się i
-                utrzymanie tempa nawet z najszybszymi klasami.
-            </p>
+            <p data-key="product_580_p2">Wydłużony, przestronny kokpit zapewnia trenerowi komfort pracy oraz miejsce na
+                niezbędny sprzęt i zapasy podczas długich dni treningowych.</p>
+            <p data-key="product_580_p3">Solidny kadłub o długości 5,8 m doskonale sprawdza się w wymagających warunkach
+                typowych dla olimpijskich akwenów regatowych.</p>
+            <p data-key="product_580_p4">Rekomendowana moc silnika <span class="bold">70 KM</span> umożliwia dynamiczne
+                poruszanie się i utrzymanie tempa nawet z najszybszymi klasami.</p>
             <p data-key="product_580_p5">
                 Olimpic AVA 5.80 to wybór profesjonalistów pracujących z klasami olimpijskimi, takimi jak <span
-                    class="bold">49er, 470, ILCA, Formula Kite, iQFOiL</span> czy <span class="bold">Nacra 17</span>,
-                gdzie niezawodność, przestrzeń i osiągi są absolutnie kluczowe.
+                    class="bold">49er, 470, ILCA, Formula Kite, iQFOiL</span> czy <span class="bold">Nacra 17</span>.
             </p>
         </div>
 

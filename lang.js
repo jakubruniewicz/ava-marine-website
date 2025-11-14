@@ -6,10 +6,12 @@ function updateLanguageButtons(activeLang) {
 
 async function setLanguage(lang) {
     try {
-        // 🔧 dynamiczne wykrywanie poprawnej ścieżki do folderu lang
         let pathPrefix = '';
-        if (window.location.pathname.includes('/ribs/') || window.location.pathname.includes('/olimpic_ribs/')) {
-            pathPrefix = '../'; // jeśli jesteśmy w podfolderze
+        if (
+            window.location.pathname.includes('/ribs/') ||
+            window.location.pathname.includes('/olimpic_ribs/')
+        ) {
+            pathPrefix = '../';
         }
 
         const response = await fetch(`${pathPrefix}lang/lang-${lang}.json`);
@@ -24,8 +26,14 @@ async function setLanguage(lang) {
             }
         });
 
+        if (window.pageTitleKey && translations[window.pageTitleKey]) {
+            document.title = translations[window.pageTitleKey];
+        }
+
         localStorage.setItem('ava-lang', lang);
+
         updateLanguageButtons(lang);
+
     } catch (error) {
         console.error('Błąd wczytywania języka:', error);
     }

@@ -1,7 +1,7 @@
 {
-    "hero_title": "AVA marine – pewność i precyzja na każdej fali",
-    "intro_heading": "AVA marine – pewność i precyzja na każdej fali",
-    "intro_text1": "AVA marine to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na wodzie oczekują niezawodności, kontroli i pełnego wsparcia.",
+    "hero_title": "AVA MARINE – pewność i precyzja na każdej fali",
+    "intro_heading": "AVA MARINE – pewność i precyzja na każdej fali",
+    "intro_text1": "AVA MARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na wodzie oczekują niezawodności, kontroli i pełnego wsparcia.",
     "intro_text2": "Charakterystyczna dla naszych jednostek doskonała sterowność, wyjątkowa stabilność i pewność prowadzenia, niezależnie od rodzaju fali, sprawiają, że AVA marine to wybór profesjonalistów.",
     "features_title": "Co wyróżnia nasze jednostki?",
     "feature1": "Płaski kokpit – maksymalna przestrzeń robocza i swoboda ruchu.",
@@ -60,5 +60,11 @@
     "contact_company": "AVAMARINE Sp. z o.o.",
     "contact_address": "Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska",
     "contact_map_link": "📍 Zobacz nas na mapie Google",
-    "coming_soon": "Nic tu jeszcze nie ma... wkrótce dodamy więcej informacji."
+    "coming_soon": "Nic tu jeszcze nie ma... wkrótce dodamy więcej informacji.",
+    "page_title_580": "AVA 5.80 Olympic",
+    "page_title_480": "AVA 4.80",
+    "page_title_540": "AVA 5.40",
+    "page_title_515": "AVA 5.15",
+    "page_title_590": "AVA 5.90",
+    "page_title_630": "AVA 6.30"
 }

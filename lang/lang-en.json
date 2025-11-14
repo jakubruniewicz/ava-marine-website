@@ -1,7 +1,7 @@
 {
-    "hero_title": "AVA marine – confidence and precision on every wave",
-    "intro_heading": "AVA marine – confidence and precision on every wave",
-    "intro_text1": "AVA marine is a brand born from a passion for sailing and a deep understanding of the needs of those who expect reliability, control, and full support on the water.",
+    "hero_title": "AVA MARINE – confidence and precision on every wave",
+    "intro_heading": "AVA MARINE – confidence and precision on every wave",
+    "intro_text1": "AVA MARINE is a brand born from a passion for sailing and a deep understanding of the needs of those who expect reliability, control, and full support on the water.",
     "intro_text2": "Known for excellent maneuverability, exceptional stability, and reliable handling in all sea conditions, AVA marine is the choice of professionals.",
     "features_title": "What makes our boats stand out?",
     "feature1": "Flat cockpit – maximum working space and freedom of movement.",
@@ -61,5 +61,11 @@
     "contact_company": "AVAMARINE Sp. z o.o.",
     "contact_address": "Plac Kaszubski 8 lok 205, 81-350 Gdynia, Poland",
     "contact_map_link": "📍 View us on Google Maps",
-    "coming_soon": "There is nothing here yet... we'll add more information soon."
+    "coming_soon": "There is nothing here yet... we'll add more information soon.",
+    "page_title_580": "AVA 5.80 Olympic",
+    "page_title_480": "AVA 4.80",
+    "page_title_540": "AVA 5.40",
+    "page_title_515": "AVA 5.15",
+    "page_title_590": "AVA 5.90",
+    "page_title_630": "AVA 6.30"
 }
