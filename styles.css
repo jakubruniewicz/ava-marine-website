@@ -1,6 +1,3 @@
-/* ======================================================================
-   GLOBAL RESET & BASE STYLES
-====================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +18,6 @@ body {
     background-blend-mode: lighten;
 }
 
-/* ======================================================================
-   SIDEBAR
-====================================================================== */
 .sidebar {
     width: 250px;
     background-color: #0056b3;
@@ -50,18 +44,12 @@ body {
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
 }
 
-/* ======================================================================
-   MAIN CONTENT
-====================================================================== */
 .main-content {
     margin-left: 250px;
     width: calc(100% - 250px);
     padding: 30px;
 }
 
-/* ======================================================================
-   HERO SECTION
-====================================================================== */
 .hero {
     position: relative;
     height: 60vh;
@@ -101,9 +89,6 @@ body {
     font-weight: 600;
 }
 
-/* ======================================================================
-   INFO SECTION
-====================================================================== */
 .info {
     margin-top: 30px;
     background-color: #ffffff;
@@ -128,9 +113,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* ======================================================================
-   PRODUCT PAGE
-====================================================================== */
 .product-page {
     max-width: 1100px;
     margin: 60px auto;
@@ -190,9 +172,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* ======================================================================
-   LIGHTBOX
-====================================================================== */
 .lightbox {
     display: none;
     position: fixed;
@@ -253,9 +232,6 @@ body {
     right: 20px;
 }
 
-/* ======================================================================
-   SCROLL GALLERY
-====================================================================== */
 .product-gallery-scroll {
     width: 100%;
     overflow-x: auto;
@@ -284,9 +260,6 @@ body {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
-/* ======================================================================
-   BACK HOME BUTTON
-====================================================================== */
 .back-home {
     position: fixed;
     top: 20px;
@@ -307,9 +280,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ======================================================================
-   LANGUAGE SWITCHER
-====================================================================== */
 .language-switcher {
     position: fixed;
     top: 20px;
@@ -329,9 +299,6 @@ body {
     text-decoration: underline;
 }
 
-/* ======================================================================
-   MENU & SUBMENU (klikane)
-====================================================================== */
 .main-menu,
 .main-menu ul {
     list-style: none;
@@ -357,7 +324,6 @@ body {
     background-color: #004080;
 }
 
-/* --- Submenu --- */
 .submenu {
     display: none;
     flex-direction: column;
@@ -375,7 +341,6 @@ body {
     display: flex;
 }
 
-/* --- Linki w submenu --- */
 .submenu a {
     font-weight: normal;
     padding: 8px 20px;
@@ -389,7 +354,6 @@ body {
     background-color: #003f7f;
 }
 
-/* --- Strzałki --- */
 .submenu-toggle::after {
     content: "▶";
     float: right;
@@ -400,9 +364,6 @@ body {
     transform: rotate(90deg);
 }
 
-/* ======================================================================
-   RESPONSYWNOŚĆ
-====================================================================== */
 @media (max-width: 768px) {
     .menu-toggle {
         position: fixed;
@@ -457,16 +418,10 @@ body {
     }
 }
 
-/* ======================================================================
-   ULEPSZONY WYGLĄD MENU — estetyka i mniejsza strzałka
-====================================================================== */
-
-/* Ogólne odstępy */
 .main-menu>li {
     margin-bottom: 10px;
 }
 
-/* Linki główne */
 .main-menu>li>a {
     display: block;
     padding: 14px 18px;
@@ -482,7 +437,6 @@ body {
     transform: translateX(3px);
 }
 
-/* Submenu — tło, padding, zaokrąglenia */
 .submenu {
     display: none;
     flex-direction: column;
@@ -500,7 +454,6 @@ body {
     display: flex;
 }
 
-/* Linki w submenu */
 .submenu a {
     font-weight: 500;
     padding: 10px 26px;
@@ -515,10 +468,8 @@ body {
     transform: translateX(4px);
 }
 
-/* Strzałka — mniejsza, płaska „v” */
 .submenu-toggle::after {
     content: "▾";
-    /* spłaszczony „v” zamiast trójkąta */
     float: right;
     font-size: 0.8em;
     margin-left: 6px;
@@ -531,16 +482,12 @@ body {
     opacity: 1;
 }
 
-/* Większe przerwy i wcięcia wewnętrzne */
 .submenu li {
     margin: 4px 0;
 }
 
-/* ======== ELEGANCKIE MENU ROZWIJANE – ESTETYCZNE POPRAWKI ======== */
-
 .sidebar nav ul li a {
     font-size: 15px;
-    /* mniejszy i bardziej spójny z hierarchią */
     font-weight: 600;
     padding: 10px 14px;
     border-radius: 8px;
@@ -551,14 +498,12 @@ body {
     background-color: #00408f;
 }
 
-/* główne linki */
 .main-menu>li>a {
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.3px;
 }
 
-/* Submenu – uproszczone i bardziej „czyste” */
 .submenu {
     display: none;
     flex-direction: column;
@@ -569,7 +514,6 @@ body {
     border-radius: 10px;
     padding: 6px 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    /* delikatny cień */
     transition: all 0.3s ease;
 }
 
@@ -577,7 +521,6 @@ body {
     display: flex;
 }
 
-/* linki w submenu */
 .submenu a {
     font-size: 14px;
     font-weight: 500;
@@ -589,10 +532,8 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Strzałki – bardziej eleganckie i „płaskie” */
 .submenu-toggle::after {
     content: "▾";
-    /* spłaszczony V zamiast dużego trójkąta */
     font-size: 10px;
     margin-left: 6px;
     transition: transform 0.25s ease;
@@ -603,16 +544,10 @@ body {
     transform: rotate(180deg);
 }
 
-/* Odstępy między grupami menu */
 .main-menu>li {
     margin-bottom: 12px;
 }
 
-/* =============================
-   Poprawa wyglądu "nagłówków" submenu
-   ============================= */
-
-/* Główne kategorie w submenu (np. Łodzie klubowe, Łodzie olimpijskie) */
 .submenu>.has-submenu>.submenu-toggle {
     font-weight: 700;
     font-size: 15px;
@@ -626,12 +561,10 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Efekt hover na tytułach sekcji */
 .submenu>.has-submenu>.submenu-toggle:hover {
     background-color: rgba(0, 64, 143, 0.9);
 }
 
-/* Linki wewnątrz sekcji (np. AVA 4.80, AVA 5.15...) */
 .submenu .submenu a {
     font-weight: 500;
     font-size: 14px;
@@ -642,19 +575,16 @@ body {
     padding: 7px 20px;
 }
 
-/* Hover dla linków wewnętrznych */
 .submenu .submenu a:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
 }
 
-/* Delikatne oddzielenie sekcji w submenu */
 .submenu>.has-submenu {
     padding-top: 6px;
     margin-top: 6px;
 }
 
-/* ====================================================================== STOPKA PRODUKTU ====================================================================== */
 .product-footer {
     background-color: #004aad;
     color: white;
@@ -689,7 +619,6 @@ body {
     text-decoration: underline;
 }
 
-/* ====================================================================== STOPKA NA BIAŁYM TLE ====================================================================== */
 .product-footer.light {
     background-color: #ffffff;
     padding: 50px 0;
@@ -729,7 +658,6 @@ body {
     text-decoration: underline;
 }
 
-/* 🌐 Przełącznik języka – elegancki styl */
 .language-switcher {
     position: fixed;
     top: 15px;
