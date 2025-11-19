@@ -692,3 +692,55 @@ body {
     background-color: #003366;
     color: white;
 }
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    /* CENTROWANIE NA TELEFONACH */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    /* mały margines, żeby zdjęcie nie dotykało krawędzi */
+}
+
+.lightbox-img {
+    max-width: 95vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* przyciski */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    padding: 12px;
+    cursor: pointer;
+    color: white;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
