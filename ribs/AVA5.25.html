@@ -16,33 +16,6 @@
     <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 
-<script>
-    const images = [
-        "../AVA5.25/AVA5.25_1.jpg",
-        "../AVA5.25/AVA5.25_2.jpg",
-        "../AVA5.25/AVA5.25_3.jpg"
-    ];
-
-    let currentIndex = 0;
-
-    function openLightbox(index) {
-        currentIndex = index;
-        document.getElementById("lightbox").style.display = "block";
-        document.getElementById("lightbox-img").src = images[currentIndex];
-    }
-
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-
-    function changeImage(n) {
-        currentIndex += n;
-        if (currentIndex >= images.length) currentIndex = 0;
-        if (currentIndex < 0) currentIndex = images.length - 1;
-        document.getElementById("lightbox-img").src = images[currentIndex];
-    }
-</script>
-
 <body>
 
     <div class="language-switcher">
@@ -113,7 +86,32 @@
         </footer>
 
     </div>
+<script>
+    const images = [
+        "../AVA5.25/AVA5.25_1.jpg",
+        "../AVA5.25/AVA5.25_2.jpg",
+        "../AVA5.25/AVA5.25_3.jpg"
+    ];
 
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex >= images.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+</script>
 </body>
 
 </html>
