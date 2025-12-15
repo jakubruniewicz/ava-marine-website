@@ -5,17 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVA 6.30</title>
+
     <script>
         window.pageTitleKey = "page_title_630";
     </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <script defer src="../lang.js"></script>
-    <link rel="icon" type="image/png" href="../favicon.png">
-
+    <link rel="icon" type="image/png" href="../icons/favicon.png">
 </head>
 
+<script>
+    const images = [
+        "../AVA6.30/6.30_1.jpg",
+        "../AVA6.30/6.30_2.jpg",
+        "../AVA6.30/6.30_3.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex >= images.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+</script>
+
 <body>
+
     <div class="language-switcher">
         <button onclick="setLanguage('pl')">PL</button> |
         <button onclick="setLanguage('en')">EN</button>
@@ -24,51 +53,63 @@
     <a href="../index.html" class="back-home" data-key="back_home">← Strona główna</a>
 
     <div class="product-page">
-        <div class="product-hero">
-            <h1 data-key="product_630_title">AVA 6.30</h1>
+
+        <div class="product-gallery-scroll">
+            <div class="gallery-track">
+                <img src="../AVA6.30/6.30_1.jpg" onclick="openLightbox(0)">
+                <img src="../AVA6.30/6.30_2.jpg" onclick="openLightbox(1)">
+                <img src="../AVA6.30/6.30_3.jpg" onclick="openLightbox(2)">
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close" onclick="closeLightbox(); event.stopPropagation();">&times;</span>
+            <img class="lightbox-img" id="lightbox-img">
+            <a class="prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</a>
+            <a class="next" onclick="changeImage(1); event.stopPropagation();">&#10095;</a>
         </div>
 
         <div class="product-description">
+            <h1 class="model-header" data-key="product_630_title">AVA 6.30</h1>
+
             <p data-key="product_630_p1">
                 Łódź pneumatyczna RIB <strong>AVA 6.30 (630 cm)</strong> to zaawansowana jednostka zaprojektowana z
-                myślą o wsparciu kampanii olimpijskich, ale także doskonale sprawdzająca się w obsłudze regat oraz
-                służbach ratowniczych.
+                myślą o
+                wsparciu kampanii olimpijskich, obsłudze regat oraz służbach ratowniczych.
             </p>
 
             <p data-key="product_630_p2">
-                Dzięki swojej długości i solidnej konstrukcji, model 6.30 zapewnia znakomitą stabilność, przestronność
-                oraz niezawodność w trudnych warunkach pogodowych.
-                Rekomendowana moc silnika <strong>100 KM</strong> gwarantuje dynamiczne poruszanie się i szybką reakcję
-                w każdej sytuacji.
+                Solidna konstrukcja i długość 6,3 m zapewniają doskonałą stabilność i przestrzeń roboczą.
+                Rekomendowana moc silnika <strong>100 KM</strong> gwarantuje dynamiczne osiągi.
             </p>
 
             <p data-key="product_630_p3">
-                Jednym z największych atutów tego modelu jest rozbudowana możliwość customizacji – od konfiguracji
-                kokpitu i układu siedzeń, po specjalistyczne wyposażenie, co pozwala w pełni dostosować jednostkę do
-                potrzeb trenera, organizatora regat czy zespołu ratowniczego.
+                Model oferuje szerokie możliwości customizacji – od układu kokpitu po specjalistyczne wyposażenie.
             </p>
 
             <p data-key="product_630_p4">
-                <strong>AVA 6.30</strong> to niezawodna i wszechstronna platforma, która odpowiada na potrzeby
-                profesjonalistów, oczekujących zarówno wysokich osiągów, jak i elastyczności wymaganej w kampanii
-                olimpijskiej.
+                <strong>AVA 6.30</strong> to niezawodna platforma dla profesjonalistów oczekujących najwyższej jakości i
+                elastyczności.
             </p>
         </div>
 
         <footer class="product-footer light">
             <div class="footer-card">
-                <img src="../titleImages/logo_clean.png" alt="AVA Marine Logo" class="footer-logo-light">
+                <img src="../icons/favicon.png" class="footer-logo-light">
 
                 <div class="footer-info-light">
-                    <p><strong data-key="footer_email">Email:</strong> <a
-                            href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a></p>
-                    <p><strong data-key="footer_phone">Telefon:</strong> +48 535 610 007, +48 501 399 200</p>
-                    <p><strong data-key="footer_company">AVAMARINE Sp. z o.o.</strong><br>
-                        <span data-key="footer_address">Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska</span>
+                    <p><strong>Email:</strong>
+                        <a href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a>,
+                        <a href="mailto:ava.gdynia@gmail.com">ava.gdynia@gmail.com</a>
+                    </p>
+                    <p><strong>Telefon:</strong> +48 535 610 007, +48 501 399 200</p>
+                    <p><strong>AVAMARINE Sp. z o.o.</strong><br>
+                        Plac Kaszubski 8 lok 205, 81-350 Gdynia
                     </p>
                 </div>
             </div>
         </footer>
+
     </div>
 
 </body>

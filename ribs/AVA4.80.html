@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVA 4.80</title>
 
     <script>
@@ -12,11 +11,35 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-
     <script defer src="../lang.js"></script>
-
-    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="icon" type="image/png" href="../icons/favicon.png">
 </head>
+
+<script>
+    const images = [
+        "../AVA4.80/4.80_1.jpg",
+        "../AVA4.80/4.80_2.jpg",
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex >= images.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        document.getElementById("lightbox-img").src = images[currentIndex];
+    }
+</script>
 
 <body>
 
@@ -28,48 +51,62 @@
     <a href="../index.html" class="back-home" data-key="back_home">← Strona główna</a>
 
     <div class="product-page">
-        <div class="product-hero">
-            <h1><span class="ava-title">AVA</span> <span class="model-number">4.80</span></h1>
+
+        <div class="product-gallery-scroll">
+            <div class="gallery-track">
+                <img src="../AVA4.80/4.80_1.jpg" onclick="openLightbox(0)">
+                <img src="../AVA4.80/4.80_2.jpg" onclick="openLightbox(1)">
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close" onclick="closeLightbox(); event.stopPropagation();">&times;</span>
+            <img class="lightbox-img" id="lightbox-img">
+            <a class="prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</a>
+            <a class="next" onclick="changeImage(1); event.stopPropagation();">&#10095;</a>
         </div>
 
         <div class="product-description">
+            <h1 class="model-header" data-key="product_480_title">AVA 4.80</h1>
+
             <p data-key="product_480_p1">
-                Łódź pneumatyczna RIB AVA 4.80 (480 cm) to doskonały wybór dla szkółek żeglarskich
-                organizujących półkolonie, zapewniająca bezpieczeństwo i wygodę zarówno dzieciom, jak i instruktorom.
+                AVA 4.80 to kompaktowa i wyjątkowo zwrotna łódź RIB, idealna do zastosowań szkoleniowych,
+                klubowych oraz jako jednostka pomocnicza.
             </p>
 
             <p data-key="product_480_p2">
-                Dzięki swojej kompaktowej konstrukcji, doskonałej manewrowości oraz stabilności, idealnie nadaje się
-                do zabezpieczania młodych żeglarzy podczas zabaw na wodzie.
+                Dzięki lekkiej konstrukcji i doskonałej manewrowości zapewnia bezpieczeństwo i komfort
+                pracy nawet w zmiennych warunkach.
             </p>
 
             <p data-key="product_480_p3">
-                Rekomendowana moc silnika 30–40 KM zapewnia odpowiednią dynamikę, by szybko reagować
-                i dbać o bezpieczeństwo uczestników półkolonii, nie tracąc przy tym na stabilności.
-            </p>
-
-            <p data-key="product_480_p4">
-                AVA 4.80 to niezawodna jednostka, która doskonale sprawdzi się w codziennej pracy
-                szkółek żeglarskich, zapewniając komfort, trwałość i bezpieczeństwo w trakcie letnich zajęć na wodzie.
+                Długość 4,8 m pozwala na łatwy transport i szybkie wodowanie,
+                a sugerowana moc silnika do 40 KM daje pełną kontrolę na wodzie.
             </p>
         </div>
 
         <footer class="product-footer light">
             <div class="footer-card">
-                <img src="../titleImages/logo_clean.png" alt="AVA Marine Logo" class="footer-logo-light">
-
+                <img src="../icons/favicon.png" class="footer-logo-light">
                 <div class="footer-info-light">
-                    <p><strong data-key="footer_email">Email:</strong> <a
-                            href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a></p>
-                    <p><strong data-key="footer_phone">Telefon:</strong> +48 535 610 007, +48 501 399 200</p>
-                    <p><strong data-key="footer_company">AVAMARINE Sp. z o.o.</strong><br>
-                        <span data-key="footer_address">Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska</span>
+                    <p><strong data-key="footer_email">Email:</strong>
+                        <a href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a>,
+                        <a href="mailto:ava.gdynia@gmail.com">ava.gdynia@gmail.com</a>
+                    </p>
+                    <p><strong data-key="footer_phone">Telefon:</strong>
+                        +48 535 610 007, +48 501 399 200
+                    </p>
+                    <p>
+                        <strong data-key="footer_company">AVAMARINE Sp. z o.o.</strong><br>
+                        <span data-key="footer_address">
+                            Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska
+                        </span>
                     </p>
                 </div>
             </div>
         </footer>
-    </div>
 
+    </div>
 </body>
 
 </html>

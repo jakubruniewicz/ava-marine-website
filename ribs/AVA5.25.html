@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <script defer src="../lang.js"></script>
-    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="icon" type="image/png" href="../icons/favicon.png">
 </head>
 
 <body>
@@ -72,10 +72,11 @@
 
         <footer class="product-footer light">
             <div class="footer-card">
-                <img src="../titleImages/logo_clean.png" alt="AVA Marine Logo" class="footer-logo-light">
+                <img src="../icons/favicon.png" alt="AVAMARINE Logo" class="footer-logo-light">
                 <div class="footer-info-light">
                     <p><strong data-key="footer_email">Email:</strong>
-                        <a href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a>
+                        <a href="mailto:ava@ava.gdynia.pl">ava@ava.gdynia.pl</a>,
+                        <a href="mailto:ava.gdynia@gmail.com">ava.gdynia@gmail.com</a>
                     </p>
                     <p><strong data-key="footer_phone">Telefon:</strong> +48 535 610 007, +48 501 399 200</p>
                     <p><strong data-key="footer_company">AVAMARINE Sp. z o.o.</strong><br>
@@ -86,32 +87,32 @@
         </footer>
 
     </div>
-<script>
-    const images = [
-        "../AVA5.25/AVA5.25_1.jpg",
-        "../AVA5.25/AVA5.25_2.jpg",
-        "../AVA5.25/AVA5.25_3.jpg"
-    ];
+    <script>
+        const images = [
+            "../AVA5.25/AVA5.25_1.jpg",
+            "../AVA5.25/AVA5.25_2.jpg",
+            "../AVA5.25/AVA5.25_3.jpg"
+        ];
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    function openLightbox(index) {
-        currentIndex = index;
-        document.getElementById("lightbox").style.display = "block";
-        document.getElementById("lightbox-img").src = images[currentIndex];
-    }
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById("lightbox").style.display = "block";
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
 
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
 
-    function changeImage(n) {
-        currentIndex += n;
-        if (currentIndex >= images.length) currentIndex = 0;
-        if (currentIndex < 0) currentIndex = images.length - 1;
-        document.getElementById("lightbox-img").src = images[currentIndex];
-    }
-</script>
+        function changeImage(n) {
+            currentIndex += n;
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
+    </script>
 </body>
 
 </html>

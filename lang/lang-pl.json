@@ -1,8 +1,8 @@
 {
-    "hero_title": "AVA MARINE – pewność i precyzja na każdej fali",
-    "intro_heading": "AVA MARINE – pewność i precyzja na każdej fali",
-    "intro_text1": "AVA MARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na wodzie oczekują niezawodności, kontroli i pełnego wsparcia.",
-    "intro_text2": "Charakterystyczna dla naszych jednostek doskonała sterowność, wyjątkowa stabilność i pewność prowadzenia, niezależnie od rodzaju fali, sprawiają, że AVA marine to wybór profesjonalistów.",
+    "hero_title": "AVAMARINE – pewność i precyzja na każdej fali",
+    "intro_heading": "AVAMARINE – pewność i precyzja na każdej fali",
+    "intro_text1": "AVAMARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na wodzie oczekują niezawodności, kontroli i pełnego wsparcia.",
+    "intro_text2": "Charakterystyczna dla naszych jednostek doskonała sterowność, wyjątkowa stabilność i pewność prowadzenia, niezależnie od rodzaju fali, sprawiają, że AVAMARINE to wybór profesjonalistów.",
     "features_title": "Co wyróżnia nasze jednostki?",
     "feature1": "Płaski kokpit – maksymalna przestrzeń robocza i swoboda ruchu.",
     "feature2": "Suchy pokład – komfort w trudniejszych warunkach, pompy zenzowe, wysoka pawęż.",
@@ -21,7 +21,7 @@
     "product_480_p2": "Dzięki swojej kompaktowej konstrukcji, doskonałej manewrowości oraz stabilności, idealnie nadaje się do zabezpieczania młodych żeglarzy podczas zabaw na wodzie.",
     "product_480_p3": "Rekomendowana moc silnika 30–40 KM zapewnia odpowiednią dynamikę, by szybko reagować i dbać o bezpieczeństwo uczestników półkolonii, nie tracąc przy tym na stabilności.",
     "product_480_p4": "AVA 4.80 to niezawodna jednostka, która doskonale sprawdzi się w codziennej pracy szkółek żeglarskich, zapewniając komfort, trwałość i bezpieczeństwo w trakcie letnich zajęć na wodzie.",
-    "footer_email": "Email",
+    "footer_email": "Email: ava@ava.gdynia.pl, ava.gdynia@gmail.com",
     "footer_phone": "Telefon",
     "footer_company": "AVAMARINE Sp. z o.o.",
     "footer_address": "Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska",
@@ -55,7 +55,7 @@
     "product_580_p5": "Olimpic AVA 5.80 to wybór profesjonalistów pracujących z klasami olimpijskimi, takimi jak 49er, 470, ILCA, Formula Kite, iQFOiL czy Nacra 17, gdzie niezawodność, przestrzeń i osiągi są absolutnie kluczowe.",
     "contact_heading": "Kontakt",
     "contact_text": "Skontaktuj się z nami – chętnie odpowiemy na wszystkie pytania dotyczące naszych łodzi, oferty czarteru oraz współpracy z klubami żeglarskimi.",
-    "contact_email": "Email:",
+    "contact_email": "Email: ava@ava.gdynia.pl, ava.gdynia@gmail.com",
     "contact_phone": "Telefon:",
     "contact_company": "AVAMARINE Sp. z o.o.",
     "contact_address": "Plac Kaszubski 8 lok 205, 81-350 Gdynia, Polska",
@@ -72,5 +72,7 @@
     "product_525_p2": "Aluminiowy kadłub zapewnia odporność na przeszkody podwodne, a dodatkowa masa daje większą stabilność, kluczową podczas pracy ratowników na fali.",
     "product_525_p3": "Rekomendowana moc silnika 70 KM gwarantuje szybkie reagowanie w sytuacjach awaryjnych.",
     "product_525_p4": "Model 5.25 ALU łączy wytrzymałość aluminium z mobilnością konstrukcji RIB, oferując niezawodność w wymagających warunkach operacyjnych.",
-    "product_525_p5": "To stabilna, wytrzymała i łatwa w manewrowaniu jednostka, świetnie sprawdzająca się w działaniach ratowniczych oraz operacjach przybrzeżnych."
+    "product_525_p5": "To stabilna, wytrzymała i łatwa w manewrowaniu jednostka, świetnie sprawdzająca się w działaniach ratowniczych oraz operacjach przybrzeżnych.",
+    "menu_about": "O nas",
+    "menu_gallery": "Galeria"
 }

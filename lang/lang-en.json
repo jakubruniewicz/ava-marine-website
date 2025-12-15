@@ -1,8 +1,8 @@
 {
-    "hero_title": "AVA MARINE – confidence and precision on every wave",
-    "intro_heading": "AVA MARINE – confidence and precision on every wave",
-    "intro_text1": "AVA MARINE is a brand born from a passion for sailing and a deep understanding of the needs of those who expect reliability, control, and full support on the water.",
-    "intro_text2": "Known for excellent maneuverability, exceptional stability, and reliable handling in all sea conditions, AVA marine is the choice of professionals.",
+    "hero_title": "AVAMARINE – confidence and precision on every wave",
+    "intro_heading": "AVAMARINE – confidence and precision on every wave",
+    "intro_text1": "AVAMARINE is a brand born from a passion for sailing and a deep understanding of the needs of those who expect reliability, control, and full support on the water.",
+    "intro_text2": "Known for excellent maneuverability, exceptional stability, and reliable handling in all sea conditions, AVAMARINE is the choice of professionals.",
     "features_title": "What makes our boats stand out?",
     "feature1": "Flat cockpit – maximum working space and freedom of movement.",
     "feature2": "Dry deck – comfort in tougher conditions, bilge pumps, high transom.",
@@ -17,7 +17,7 @@
     "menu_charter": "Charter",
     "menu_contact": "Contact",
     "back_home": "← Home",
-    "footer_email": "Email:",
+    "footer_email": "Email: ava@ava.gdynia.pl, ava.gdynia@gmail.com",
     "footer_phone": "Phone:",
     "footer_company": "AVAMARINE Sp. z o.o.",
     "footer_address": "Plac Kaszubski 8 lok 205, 81-350 Gdynia, Poland",
@@ -56,7 +56,7 @@
     "product_630_p5": "For race officials, the AVA 6.30 is a reliable, adaptable platform built for professionals who demand both performance and flexibility needed in Olympic campaigns.",
     "contact_heading": "Contact",
     "contact_text": "Get in touch with us – we’ll be happy to answer all your questions about our boats, charter offers, and cooperation with sailing clubs.",
-    "contact_email": "Email:",
+    "contact_email": "Email: ava@ava.gdynia.pl, ava.gdynia@gmail.com",
     "contact_phone": "Phone:",
     "contact_company": "AVAMARINE Sp. z o.o.",
     "contact_address": "Plac Kaszubski 8 lok 205, 81-350 Gdynia, Poland",
@@ -73,5 +73,7 @@
     "product_525_p2": "The aluminium hull provides excellent resistance to underwater obstacles, while the added weight improves stability — essential for lifeguards working in waves.",
     "product_525_p3": "The recommended 70 HP engine ensures fast and effective response in emergencies.",
     "product_525_p4": "The 5.25 ALU model combines the durability of aluminium with the agility of a RIB, delivering reliability in demanding operational conditions.",
-    "product_525_p5": "It is a stable, durable and highly manoeuvrable boat, ideal for rescue tasks and coastal operations."
+    "product_525_p5": "It is a stable, durable and highly manoeuvrable boat, ideal for rescue tasks and coastal operations.",
+    "menu_about": "About us",
+    "menu_gallery": "Gallery"
 }

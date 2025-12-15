@@ -4,13 +4,61 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AVA MARINE - Home</title>
+    <title>AVAMARINE - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="lang.js"></script>
-    <link rel="icon" type="image/png" href="favicon.png">
-
+    <link rel="icon" type="image/png" href="icons/favicon.png">
 </head>
+
+<script>
+    function toggleMenu() {
+        document.querySelector(".sidebar").classList.toggle("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+            toggle.addEventListener("click", e => {
+                e.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                if (!submenu) return;
+
+                const parentMenu = toggle.closest("ul");
+                parentMenu.querySelectorAll(":scope > .has-submenu > .submenu").forEach(sib => {
+                    if (sib !== submenu) sib.classList.remove("open");
+                });
+                parentMenu.querySelectorAll(":scope > .has-submenu > .submenu-toggle").forEach(btn => {
+                    if (btn !== toggle) btn.classList.remove("active");
+                });
+                submenu.classList.toggle("open");
+                toggle.classList.toggle("active");
+            });
+        });
+
+        const hero = document.querySelector(".hero");
+        if (hero) {
+            const images = [
+                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0027.jpg",
+                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0028.jpg",
+                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0029.jpg",
+                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0092.jpg",
+                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0094.jpg"
+            ];
+            let current = 0;
+            hero.style.backgroundImage = `url('${images[current]}')`;
+
+            function changeBackground() {
+                hero.style.opacity = 0;
+                setTimeout(() => {
+                    current = (current + 1) % images.length;
+                    hero.style.backgroundImage = `url('${images[current]}')`;
+                    hero.style.opacity = 1;
+                }, 800);
+            }
+            setInterval(changeBackground, 6000);
+        }
+    });
+</script>
 
 <body>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -22,131 +70,78 @@
 
     <div class="sidebar">
         <div class="logo-container">
-            <img src="titleImages/logo_clean.png" alt="AVA Marine Logo" class="sidebar-logo" />
+            <img src="icons/favicon.png" alt="AVAMARINE Logo" class="sidebar-logo" />
         </div>
+
         <nav>
             <ul class="main-menu">
+                <li>
+                    <a href="index.html" class="active" data-key="menu_about">O nas</a>
+                </li>
+
                 <li class="has-submenu">
                     <a href="#" class="submenu-toggle" data-key="menu_models">Modele</a>
                     <ul class="submenu">
-                        <li class="has-submenu">
-                            <a href="#" class="submenu-toggle" data-key="menu_club_boats">Łodzie klubowe</a>
-                            <ul class="submenu">
-                                <li><a href="ribs/AVA4.80.html">AVA 4.80</a></li>
-                                <li><a href="ribs/AVA5.15.html">AVA 5.15</a></li>
-                                <li><a href="ribs/AVA5.25.html">AVA 5.25</a></li>
-                                <li><a href="ribs/AVA5.4.html">AVA 5.40 Garda</a></li>
-                                <li><a href="ribs/AVA5.90.html">AVA 5.90 ALU</a></li>
-                                <li><a href="ribs/AVA6.30.html">AVA 6.30</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="#" class="submenu-toggle" data-key="menu_olympic_boats">Łodzie olimpijskie</a>
-                            <ul class="submenu">
-                                <li><a href="olimpic_ribs/AVA5.80.html">AVA 5.80 Olympic</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="ribs/AVA4.80.html">AVA 4.80</a></li>
+                        <li><a href="ribs/AVA5.15.html">AVA 5.15 COMO</a></li>
+                        <li><a href="ribs/AVA5.25.html">AVA 5.25 AL</a></li>
+                        <li><a href="ribs/AVA5.40.html">AVA 5.40 Garda</a></li>
+                        <li><a href="ribs/AVA5.80.html">AVA 5.80 Olympic</a></li>
+                        <li><a href="ribs/AVA5.90.html">AVA 5.90 AL</a></li>
+                        <li><a href="ribs/AVA6.30.html">AVA 6.30 JURY</a></li>
                     </ul>
                 </li>
-                <li><a href="used.html" data-key="menu_used">Używane RIBy</a></li>
-                <li><a href="charter.html" data-key="menu_charter">Charter</a></li>
+
+                <li><a href="gallery.html" data-key="menu_gallery">Galeria</a></li>
                 <li><a href="contact.html" data-key="menu_contact">Kontakt</a></li>
             </ul>
         </nav>
+
+        <div class="sidebar-social">
+            <div class="sidebar-divider"></div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/AVAribs" target="_blank" aria-label="Facebook">
+                    <img src="icons/facebook_blue.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/avamarine.rib/" target="_blank" aria-label="Instagram">
+                    <img src="icons/instagram_blue.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="main-content">
         <section class="hero">
-            <h1 data-key="hero_title">AVA MARINE – pewność i precyzja na każdej fali</h1>
+            <h1 data-key="hero_title">AVAMARINE – pewność i precyzja na każdej fali</h1>
         </section>
 
         <section class="info small-text">
-            <p><strong data-key="intro_heading">AVA MARINE – pewność i precyzja na każdej fali</strong></p>
+            <p><strong data-key="intro_heading">AVAMARINE – pewność i precyzja na każdej fali</strong></p>
 
             <p data-key="intro_text1">
-                AVA MARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na
-                wodzie
-                oczekują niezawodności, kontroli i pełnego wsparcia.
+                AVAMARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na
+                wodzie oczekują niezawodności, kontroli i pełnego wsparcia.
             </p>
 
             <p data-key="intro_text2">
                 Charakterystyczna dla naszych jednostek doskonała sterowność, wyjątkowa stabilność i pewność
-                prowadzenia,
-                niezależnie od rodzaju fali, sprawiają, że AVA MARINE to wybór profesjonalistów. RIB-y AVA MARINE to nie
-                tylko
-                łodzie — to precyzyjnie zaprojektowane narzędzia do intensywnej i skutecznej pracy na wodzie. Nasze
-                konstrukcje
-                powstały z myślą o długotrwałym użytkowaniu w realiach codziennych treningów i przygotowań regatowych.
+                prowadzenia sprawiają, że AVAMARINE to wybór profesjonalistów.
             </p>
 
             <p><strong data-key="features_title">Co wyróżnia nasze jednostki?</strong></p>
             <ul>
-                <li data-key="feature1"><strong>Płaski kokpit</strong> – maksymalna przestrzeń robocza i swoboda ruchu.
-                </li>
-                <li data-key="feature2"><strong>Suchy pokład</strong> – komfort w trudniejszych warunkach, pompy
-                    zenzowe, wysoka pawęż.</li>
-                <li data-key="feature3"><strong>V-kształtne dno i wysoki dziób</strong> – sucha i stabilna jazda nawet
-                    przy dużym zafalowaniu.</li>
-                <li data-key="feature4"><strong>Bezpieczeństwo trenera</strong> – ergonomiczne stanowisko sternika,
-                    stabilna konstrukcja.</li>
-                <li data-key="feature5"><strong>Jakość wykończenia</strong> – trwałość, estetyka, funkcjonalność.</li>
+                <li data-key="feature1"><strong>Płaski kokpit</strong> – maksymalna przestrzeń robocza.</li>
+                <li data-key="feature2"><strong>Suchy pokład</strong> – komfort w trudnych warunkach.</li>
+                <li data-key="feature3"><strong>V-kształtne dno</strong> – stabilność na fali.</li>
+                <li data-key="feature4"><strong>Bezpieczeństwo</strong> – ergonomia i kontrola.</li>
+                <li data-key="feature5"><strong>Jakość</strong> – trwałość i estetyka.</li>
             </ul>
 
             <p data-key="intro_end">
-                Nasze RIB-y to połączenie praktycznego podejścia z nowoczesną technologią – zbudowane po to, by służyć
-                niezawodnie i wspierać rozwój żeglarskich talentów.
+                Nasze RIB-y to połączenie praktycznego podejścia z nowoczesną technologią.
             </p>
         </section>
     </div>
-
-    <script>
-        function toggleMenu() {
-            document.querySelector(".sidebar").classList.toggle("active");
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".submenu-toggle").forEach(toggle => {
-                toggle.addEventListener("click", e => {
-                    e.preventDefault();
-                    const submenu = toggle.nextElementSibling;
-                    if (!submenu) return;
-
-                    const parentMenu = toggle.closest("ul");
-                    parentMenu.querySelectorAll(":scope > .has-submenu > .submenu").forEach(sib => {
-                        if (sib !== submenu) sib.classList.remove("open");
-                    });
-                    parentMenu.querySelectorAll(":scope > .has-submenu > .submenu-toggle").forEach(btn => {
-                        if (btn !== toggle) btn.classList.remove("active");
-                    });
-                    submenu.classList.toggle("open");
-                    toggle.classList.toggle("active");
-                });
-            });
-
-            const hero = document.querySelector(".hero");
-            if (hero) {
-                const images = [
-                    "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0027.jpg",
-                    "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0028.jpg",
-                    "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0029.jpg",
-                    "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0092.jpg",
-                    "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0094.jpg"
-                ];
-                let current = 0;
-                hero.style.backgroundImage = `url('${images[current]}')`;
-
-                function changeBackground() {
-                    hero.style.opacity = 0;
-                    setTimeout(() => {
-                        current = (current + 1) % images.length;
-                        hero.style.backgroundImage = `url('${images[current]}')`;
-                        hero.style.opacity = 1;
-                    }, 800);
-                }
-                setInterval(changeBackground, 6000);
-            }
-        });
-    </script>
 
 </body>
 

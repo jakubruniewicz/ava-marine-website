@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVA MARINE – Galeria</title>
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="lang.js"></script>
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="language-switcher">
+        <button onclick="setLanguage('pl')">PL</button> |
+        <button onclick="setLanguage('en')">EN</button>
+    </div>
+
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="icons/favicon.png" class="sidebar-logo" />
+        </div>
+
+        <nav>
+            <ul class="main-menu">
+                <li>
+                    <a href="index.html" data-key="menu_about">O nas</a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle" data-key="menu_models">Modele</a>
+                    <ul class="submenu">
+                        <li><a href="ribs/AVA4.80.html">AVA 4.80</a></li>
+                        <li><a href="ribs/AVA5.15.html">AVA 5.15 COMO</a></li>
+                        <li><a href="ribs/AVA5.25.html">AVA 5.25 AL</a></li>
+                        <li><a href="ribs/AVA5.40.html">AVA 5.40 Garda</a></li>
+                        <li><a href="ribs/AVA5.80.html">AVA 5.80 Olympic</a></li>
+                        <li><a href="ribs/AVA5.90.html">AVA 5.90 AL</a></li>
+                        <li><a href="ribs/AVA6.30.html">AVA 6.30 JURY</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="gallery.html" class="active" data-key="menu_gallery">Galeria</a>
+                </li>
+
+                <li>
+                    <a href="contact.html" data-key="menu_contact">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-social">
+            <div class="sidebar-divider"></div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/AVAribs" target="_blank" aria-label="Facebook">
+                    <img src="icons/facebook_blue.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/avamarine.rib/" target="_blank" aria-label="Instagram">
+                    <img src="icons/instagram_blue.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="info">
+            <h2 data-key="menu_gallery">Galeria</h2>
+
+            <div class="gallery-grid">
+                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0027.jpg">
+                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0028.jpg">
+                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0029.jpg">
+                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0092.jpg">
+                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0094.jpg">
+            </div>
+        </section>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" id="lightbox-close">&times;</span>
+        <span class="prev" id="lightbox-prev">&#10094;</span>
+        <img class="lightbox-img" id="lightbox-img" />
+        <span class="next" id="lightbox-next">&#10095;</span>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".sidebar").classList.toggle("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+                toggle.addEventListener("click", e => {
+                    e.preventDefault();
+
+                    const submenu = toggle.nextElementSibling;
+                    if (!submenu) return;
+
+                    const parentMenu = toggle.closest("ul");
+
+                    parentMenu.querySelectorAll(":scope > .has-submenu > .submenu").forEach(sib => {
+                        if (sib !== submenu) sib.classList.remove("open");
+                    });
+
+                    parentMenu.querySelectorAll(":scope > .has-submenu > .submenu-toggle").forEach(btn => {
+                        if (btn !== toggle) btn.classList.remove("active");
+                    });
+
+                    submenu.classList.toggle("open");
+                    toggle.classList.toggle("active");
+                });
+            });
+
+            /* ===== GALLERY / LIGHTBOX ===== */
+            const images = Array.from(document.querySelectorAll(".gallery-item"));
+            const lightbox = document.getElementById("lightbox");
+            const img = document.getElementById("lightbox-img");
+            const closeBtn = document.getElementById("lightbox-close");
+            const prevBtn = document.getElementById("lightbox-prev");
+            const nextBtn = document.getElementById("lightbox-next");
+
+            let current = 0;
+
+            function show(index) {
+                if (index < 0) index = images.length - 1;
+                if (index >= images.length) index = 0;
+                current = index;
+                img.src = images[current].src;
+            }
+
+            images.forEach((image, i) => {
+                image.addEventListener("click", () => {
+                    show(i);
+                    lightbox.style.display = "flex";
+                    document.body.style.overflow = "hidden";
+                });
+            });
+
+            closeBtn.onclick = () => {
+                lightbox.style.display = "none";
+                document.body.style.overflow = "";
+            };
+
+            prevBtn.onclick = e => {
+                e.stopPropagation();
+                show(current - 1);
+            };
+
+            nextBtn.onclick = e => {
+                e.stopPropagation();
+                show(current + 1);
+            };
+
+            lightbox.onclick = e => {
+                if (e.target === lightbox) closeBtn.click();
+            };
+
+            document.addEventListener("keydown", e => {
+                if (lightbox.style.display !== "flex") return;
+                if (e.key === "ArrowLeft") show(current - 1);
+                if (e.key === "ArrowRight") show(current + 1);
+                if (e.key === "Escape") closeBtn.click();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
