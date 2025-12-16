@@ -8,7 +8,9 @@
     <link rel="icon" type="image/png" href="icons/favicon.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark.css">
+    <script defer src="theme.js"></script>
     <script defer src="lang.js"></script>
 </head>
 
@@ -72,11 +74,14 @@
             <h2 data-key="menu_gallery">Galeria</h2>
 
             <div class="gallery-grid">
-                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0027.jpg">
-                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0028.jpg">
-                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0029.jpg">
-                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0092.jpg">
-                <img class="gallery-item" src="titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0094.jpg">
+                <img class="gallery-item" src="titleImages/1.jpg">
+                <img class="gallery-item" src="titleImages/2.jpg">
+                <img class="gallery-item" src="titleImages/3.jpg">
+                <img class="gallery-item" src="titleImages/4.jpg">
+                <img class="gallery-item" src="titleImages/5.jpg">
+                <img class="gallery-item" src="titleImages/6.jpg">
+                <img class="gallery-item" src="titleImages/7.jpg">
+                <img class="gallery-item" src="titleImages/8.jpg">
             </div>
         </section>
     </div>
@@ -117,7 +122,6 @@
                 });
             });
 
-            /* ===== GALLERY / LIGHTBOX ===== */
             const images = Array.from(document.querySelectorAll(".gallery-item"));
             const lightbox = document.getElementById("lightbox");
             const img = document.getElementById("lightbox-img");
@@ -169,7 +173,9 @@
             });
         });
     </script>
-
+    <button id="darkToggle" class="dark-toggle floating-dark" onclick="toggleDark()" aria-label="Tryb ciemny">
+        🌙
+    </button>
 </body>
 
 </html>

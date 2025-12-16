@@ -5,9 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AVAMARINE - Home</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark.css">
+
+    <script defer src="theme.js"></script>
     <script defer src="lang.js"></script>
+
     <link rel="icon" type="image/png" href="icons/favicon.png">
 </head>
 
@@ -30,6 +35,7 @@
                 parentMenu.querySelectorAll(":scope > .has-submenu > .submenu-toggle").forEach(btn => {
                     if (btn !== toggle) btn.classList.remove("active");
                 });
+
                 submenu.classList.toggle("open");
                 toggle.classList.toggle("active");
             });
@@ -38,12 +44,13 @@
         const hero = document.querySelector(".hero");
         if (hero) {
             const images = [
-                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0027.jpg",
-                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0028.jpg",
-                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0029.jpg",
-                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0092.jpg",
-                "titleImages/Internet_2025-06-14_26_RIBS_szymon_sikora_photo_0094.jpg"
+                "titleImages/3.jpg",
+                "titleImages/4.jpg",
+                "titleImages/5.jpg",
+                "titleImages/7.jpg",
+                "titleImages/8.jpg"
             ];
+
             let current = 0;
             hero.style.backgroundImage = `url('${images[current]}')`;
 
@@ -55,12 +62,14 @@
                     hero.style.opacity = 1;
                 }, 800);
             }
+
             setInterval(changeBackground, 6000);
         }
     });
 </script>
 
 <body>
+
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <div class="language-switcher">
@@ -82,7 +91,7 @@
                 <li class="has-submenu">
                     <a href="#" class="submenu-toggle" data-key="menu_models">Modele</a>
                     <ul class="submenu">
-                        <li><a href="ribs/AVA4.80.html">AVA 4.80</a></li>
+                        <li><a href="ribs/AVA4.80.html">AVA 4.80 CAVO</a></li>
                         <li><a href="ribs/AVA5.15.html">AVA 5.15 COMO</a></li>
                         <li><a href="ribs/AVA5.25.html">AVA 5.25 AL</a></li>
                         <li><a href="ribs/AVA5.4.html">AVA 5.40 Garda</a></li>
@@ -119,13 +128,14 @@
             <p><strong data-key="intro_heading">AVAMARINE – pewność i precyzja na każdej fali</strong></p>
 
             <p data-key="intro_text1">
-                AVAMARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych, którzy na
-                wodzie oczekują niezawodności, kontroli i pełnego wsparcia.
+                AVAMARINE to marka stworzona z pasji do żeglarstwa i głębokiego zrozumienia potrzeb tych,
+                którzy na wodzie oczekują niezawodności, kontroli i pełnego wsparcia.
             </p>
 
             <p data-key="intro_text2">
-                Charakterystyczna dla naszych jednostek doskonała sterowność, wyjątkowa stabilność i pewność
-                prowadzenia sprawiają, że AVAMARINE to wybór profesjonalistów.
+                Charakterystyczna dla naszych jednostek doskonała sterowność,
+                wyjątkowa stabilność i pewność prowadzenia sprawiają,
+                że AVAMARINE to wybór profesjonalistów.
             </p>
 
             <p><strong data-key="features_title">Co wyróżnia nasze jednostki?</strong></p>
@@ -142,6 +152,10 @@
             </p>
         </section>
     </div>
+
+    <button id="darkToggle" class="dark-toggle floating-dark" onclick="toggleDark()" aria-label="Tryb ciemny">
+        🌙
+    </button>
 
 </body>
 

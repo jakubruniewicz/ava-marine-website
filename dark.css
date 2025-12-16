@@ -1,0 +1,102 @@
+body.dark {
+    color: #e5e7eb;
+    background-color: #0f172a;
+    background-image: none;
+    background-blend-mode: normal;
+
+}
+
+body.dark .sidebar {
+    background: linear-gradient(180deg, #1e293b 0%, #020617 100%);
+}
+
+body.dark .main-content {
+    background-color: transparent;
+}
+
+body.dark .hero::after {
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.4));
+}
+
+body.dark .info,
+body.dark .product-page,
+body.dark .footer-card {
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+body.dark .product-description {
+    color: #d1d5db;
+}
+
+body.dark .product-hero {
+    background-color: #020617;
+}
+
+body.dark .main-menu>li>a {
+    color: #c7d2fe;
+}
+
+body.dark .main-menu>li>a:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+}
+
+body.dark .submenu {
+    background-color: #020617;
+}
+
+body.dark .submenu a {
+    color: #e0e7ff;
+}
+
+body.dark .submenu a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .language-switcher {
+    background: rgba(15, 23, 42, 0.85);
+}
+
+body.dark .language-switcher button {
+    color: #c7d2fe;
+}
+
+body.dark .language-switcher button.active {
+    background-color: #4f46e5;
+    color: #fff;
+}
+
+body.dark .back-home {
+    background-color: #1e293b;
+}
+
+body.dark .back-home:hover {
+    background-color: #334155;
+}
+
+body.dark .product-gallery-scroll {
+    background-color: #020617;
+}
+
+body.dark .lightbox {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+body.dark .product-footer {
+    background-color: #020617;
+}
+
+body.dark a {
+    color: #93c5fd;
+}
+
+body.dark .floating-dark {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+body.dark .floating-dark:hover {
+    background-color: #334155;
+}
